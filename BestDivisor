@@ -1,0 +1,15 @@
+print(max((d for d in range(1, n+1) if n%d == 0), key=lambda x: sum(map(int, str(x)))))
+
+# summing the digits is O(log n), so this code runs in O(n * log(n))
+#from tobeannouncd
+"""
+(d for d in range(1, n+1) if n%d == 0)
+
+List comprehension that provides divisors (d) of n by checking all values from 1 to n. There are better ways to find divisors, but not in one line.
+
+key=lambda x: sum(map(int, str(x)))
+
+The max function has the keyword argument 'key' that allows you define a unary operation that is applied to items being compared before comparing them. The lambda function converts the number into a string, maps int onto each character in the string, and then sums the ints together.
+
+As for the rule that ties are won by smaller numbers, the max function will return the first value if there are more than one maximum value.
+"""
