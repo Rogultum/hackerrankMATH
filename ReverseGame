@@ -1,0 +1,19 @@
+def reverseman(n, k):  
+    if (n - 1) // 2 == k:
+        return(n - 1)
+    if k > (n / 2) :
+        pos = n - k - 1
+        ans = pos * 2
+    if k < (n / 2):
+        pos = k
+        ans = (pos * 2) + 1
+    return(ans)
+
+t = int(input())
+for _ in range(t):
+    a, b = map(int, input().split())
+    
+    result = reverseman(a, b)
+    
+    print(result)
+    
